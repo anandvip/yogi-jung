@@ -491,6 +491,41 @@
             font-style: italic;
         }
 
+        .projection-trigger {
+            background: #17a2b8;
+            color: white;
+            border: none;
+            padding: 0.2rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            margin-left: 0.3rem;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            vertical-align: super;
+        }
+
+        .projection-trigger:hover {
+            background: #138496;
+            transform: scale(1.05);
+        }
+
+        .fundamental-concept {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+
+        .concept-examples {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+            border-left: 3px solid rgba(255,255,255,0.8);
+        }
+
         .framework-disclaimer {
             background: var(--bg-light);
             border-left: 4px solid #6c757d;
@@ -527,8 +562,102 @@
                 📚 <strong>October 2024 Learning Practice:</strong> An exploratory framework integrating <a href="#archetypes" class="context-link">Jung's 4 core archetypes</a>, <a href="#shadow" class="context-link">5 principles of mental strength</a>, and <a href="#attachment" class="context-link">12 archetypal figures</a> into a comprehensive system for investigating psychological sovereignty and <a href="https://self.vipulanand.in/" target="_blank" style="color: #007acc; text-decoration: underline; font-weight: 600;">conscious detachment from outcomes</a>.
             </div>
 
+            <!-- Projection Fundamentals Popover -->
+            <div id="projection-fundamentals" popover>
+                <div class="popover-content">
+                    <button class="close-popover" popovertarget="projection-fundamentals">×</button>
+                    <div class="popover-title">🪞 Understanding Projection: A Fundamental Psychological Mechanism</div>
+                    
+                    <div class="fundamental-concept">
+                        <h3 style="color: white; margin-top: 0;">What Is Projection?</h3>
+                        <p><strong>Projection</strong> is an unconscious psychological defense mechanism where we attribute our own unacknowledged thoughts, feelings, traits, or motivations to other people or external situations.</p>
+                        
+                        <div class="concept-examples">
+                            <strong>Simple Example:</strong><br>
+                            • You feel angry but don't want to admit it<br>
+                            • Instead, you perceive others as being angry at you<br>
+                            • You've "projected" your anger onto them
+                        </div>
+                    </div>
+
+                    <h3>Why Projection Happens</h3>
+                    <p>Jung discovered that projection serves several psychological functions:</p>
+                    <ul>
+                        <li><span class="key-concept">Psychological Protection:</span> Keeps uncomfortable truths about ourselves out of conscious awareness</li>
+                        <li><span class="key-concept">Identity Maintenance:</span> Preserves our self-image by locating "bad" qualities in others</li>
+                        <li><span class="key-concept">Unconscious Communication:</span> Expresses what we can't directly acknowledge</li>
+                        <li><span class="key-concept">Relationship Navigation:</span> Manages interpersonal dynamics (though often unhealthily)</li>
+                    </ul>
+
+                    <h3>Common Projection Examples in Daily Life</h3>
+                    <div class="example-box">
+                        <strong>🎭 Personal Projections:</strong>
+                        <ul>
+                            <li><strong>Criticism:</strong> "They're so judgmental" (when you're being judgmental)</li>
+                            <li><strong>Dishonesty:</strong> "I don't trust them" (when you're being deceptive)</li>
+                            <li><strong>Laziness:</strong> "Everyone's so unmotivated" (avoiding your own lack of drive)</li>
+                            <li><strong>Insecurity:</strong> "They think they're better than everyone" (your own feelings of inadequacy)</li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <strong>🌍 Collective Projections:</strong>
+                        <ul>
+                            <li><strong>Political:</strong> Attributing all problems to opposing groups</li>
+                            <li><strong>Cultural:</strong> Seeing other cultures as inferior/superior</li>
+                            <li><strong>Generational:</strong> "Kids these days..." or "Boomers are..."</li>
+                            <li><strong>Professional:</strong> Workplace scapegoating and blame patterns</li>
+                        </ul>
+                    </div>
+
+                    <h3>How to Recognize Projection</h3>
+                    <div class="practice-tip">
+                        <strong>🔍 Projection Detection Signals:</strong>
+                        <ul>
+                            <li><strong>Intense emotional reactions</strong> to specific people/behaviors</li>
+                            <li><strong>Patterns of seeing the same "faults"</strong> in multiple people</li>
+                            <li><strong>Strong judgments</strong> that feel disproportionate</li>
+                            <li><strong>"Everyone else" language</strong> - generalizing about others</li>
+                            <li><strong>Victim mentality</strong> - constantly being wronged by others</li>
+                        </ul>
+                    </div>
+
+                    <div class="modern-relevance">
+                        <h3>🌐 Projection in the AI Age</h3>
+                        <p><strong>Why Understanding Projection Is Crucial Now:</strong></p>
+                        <ul>
+                            <li><strong>Social Media Echo Chambers:</strong> We project our beliefs onto curated feeds</li>
+                            <li><strong>AI & Technology Fears:</strong> Often projecting human limitations onto machines</li>
+                            <li><strong>Information Overload:</strong> Projecting our confusion onto "fake news" and others</li>
+                            <li><strong>Digital Relationships:</strong> Projecting onto online personas and avatars</li>
+                            <li><strong>Rapid Change Anxiety:</strong> Projecting uncertainty onto external targets</li>
+                        </ul>
+                    </div>
+
+                    <h3>The Path Beyond Projection</h3>
+                    <div class="important-quote">
+                        <strong>Jung's Key Insight:</strong> "Everything that irritates us about others can lead us to an understanding of ourselves." When we recognize projection, we reclaim lost parts of our psyche and become more psychologically complete.
+                    </div>
+
+                    <div class="practice-tip">
+                        <strong>🎯 Daily Projection Work:</strong>
+                        <ol>
+                            <li><strong>Notice</strong> strong reactions to others</li>
+                            <li><strong>Ask:</strong> "What might this reveal about me?"</li>
+                            <li><strong>Explore:</strong> "Do I have this quality too?"</li>
+                            <li><strong>Integrate:</strong> "How can I own this aspect of myself?"</li>
+                            <li><strong>Relate:</strong> "How does understanding this change my perspective?"</li>
+                        </ol>
+                    </div>
+
+                    <p><em>Understanding projection is fundamental to psychological growth because it's the primary mechanism through which we avoid self-awareness. When we stop projecting, we start integrating - and integration is the pathway to psychological strength and authentic relationship with ourselves and others.</em></p>
+                </div>
+            </div>
+
             <div class="framework-disclaimer">
                 <strong>🧭 Exploration Note:</strong> These frameworks are offered as tools for self-discovery, not absolute truths. Jung himself emphasized individual exploration over rigid doctrine. Use what resonates, adapt what serves, and trust your own experience as the ultimate guide. Change is indeed the pattern of nature - your understanding may evolve as you do.
+                <br><br>
+                <strong>📚 Learning Support:</strong> Blue buttons throughout the document provide fundamental concept explanations (like <button class="projection-trigger" popovertarget="projection-fundamentals" style="margin: 0 0.2rem;">projection</button>) designed for newcomers to psychological frameworks. These serve as stepping stones into deeper understanding in our complex, interconnected world.
             </div>
             
             <div class="progress-bar">
@@ -552,7 +681,7 @@
                 <option value="#practice">🎯 Complete Integration Practice Guide</option>
             </select>
             <div style="margin-top: 0.5rem; font-size: 0.85rem; color: #6c757d; text-align: center;">
-                💡 <em>Tap section headers to expand/collapse content • Mobile-optimized for on-the-go study</em>
+                💡 <em>Tap section headers to expand/collapse content • Blue buttons explain fundamental concepts • Mobile-optimized for on-the-go study</em>
             </div>
         </div>
 
@@ -1158,16 +1287,16 @@
 
             <div class="principle-box">
                 <div class="principle-title">Jung's Third Principle:</div>
-                "Become so conscious of projection that others' projections can't touch you. When you understand that most of what people say about you is actually about them, their opinions lose all power over your psychological state."
+                "Become so conscious of projection<button class="projection-trigger" popovertarget="projection-fundamentals">?</button> that others' projections<button class="projection-trigger" popovertarget="projection-fundamentals">?</button> can't touch you. When you understand that most of what people say about you is actually about them, their opinions lose all power over your psychological state."
             </div>
 
-            <h2>Understanding Projection</h2>
+            <h2>Understanding Projection<button class="projection-trigger" popovertarget="projection-fundamentals">What Is This?</button></h2>
             <div class="important-quote">
-                "Projection is unconscious autobiography. When someone attacks you, they're usually describing their own shadow. When they judge you, they're revealing their own rejected aspects."
+                "Projection<button class="projection-trigger" popovertarget="projection-fundamentals">?</button> is unconscious autobiography. When someone attacks you, they're usually describing their own shadow. When they judge you, they're revealing their own rejected aspects."
             </div>
 
-            <h3>The Projection Dynamic</h3>
-            <p>Once you see projection clearly:</p>
+            <h3>The Projection<button class="projection-trigger" popovertarget="projection-fundamentals">?</button> Dynamic</h3>
+            <p>Once you see projection<button class="projection-trigger" popovertarget="projection-fundamentals">?</button> clearly:</p>
             <ul>
                 <li><span class="key-concept">Criticism</span> stops hurting when you recognize it as the critic's self-portrait</li>
                 <li><span class="key-concept">Attacks</span> stop landing when you see them as the attacker's shadow confession</li>
@@ -1181,8 +1310,8 @@
                 <em>Result:</em> Attackers became confused, agitated, often apologizing without understanding why.
             </div>
 
-            <h3>Breaking the Projection Economy</h3>
-            <p>Most human interaction is <span class="key-concept">mutual projection</span>: "I'll carry your shadow if you carry mine."</p>
+            <h3>Breaking the Projection<button class="projection-trigger" popovertarget="projection-fundamentals">?</button> Economy</h3>
+            <p>Most human interaction is <span class="key-concept">mutual projection</span><button class="projection-trigger" popovertarget="projection-fundamentals">?</button>: "I'll carry your shadow if you carry mine."</p>
             <p>When you stop participating:</p>
             <ul>
                 <li>The unconscious economy collapses</li>
@@ -1191,20 +1320,20 @@
             </ul>
 
             <div class="practice-tip">
-                <strong>🎭 Projection Immunity Practice:</strong>
+                <strong>🎭 Projection<button class="projection-trigger" popovertarget="projection-fundamentals">?</button> Immunity Practice:</strong>
                 <ul>
                     <li>When triggered, ask: "Is this mine or theirs?"</li>
                     <li>When attacked, wonder: "What are they confessing about themselves?"</li>
-                    <li>When judged, consider: "What shadow material are they projecting?"</li>
+                    <li>When judged, consider: "What shadow material are they projecting<button class="projection-trigger" popovertarget="projection-fundamentals">?</button>?"</li>
                 </ul>
             </div>
 
             <div class="recall-questions">
-                <h3>🎯 Projection Awareness Recall</h3>
+                <h3>🎯 Projection<button class="projection-trigger" popovertarget="projection-fundamentals">?</button> Awareness Recall</h3>
                 <ul>
-                    <li>What is Jung's definition of projection as "unconscious autobiography"?</li>
+                    <li>What is Jung's definition of projection<button class="projection-trigger" popovertarget="projection-fundamentals">?</button> as "unconscious autobiography"?</li>
                     <li>How does the "mirror effect" work in practice?</li>
-                    <li>What happens when someone stops participating in the projection economy?</li>
+                    <li>What happens when someone stops participating in the projection<button class="projection-trigger" popovertarget="projection-fundamentals">?</button> economy?</li>
                 </ul>
             </div>
         </section>
@@ -1636,7 +1765,7 @@
             <div class="example-box">
                 <strong>🌞 Midday Check-in (5 minutes):</strong>
                 <ul>
-                    <li><strong>Projection Awareness:</strong> "What reactions am I having that might be projections?"</li>
+                    <li><strong>Projection<button class="projection-trigger" popovertarget="projection-fundamentals">?</button> Awareness:</strong> "What reactions am I having that might be projections<button class="projection-trigger" popovertarget="projection-fundamentals">?</button>?"</li>
                     <li><strong>Archetypal Shift:</strong> "Am I being driven by attachment-prone archetypes? Can I shift to a more detached approach?"</li>
                     <li><strong>Binary Trap Check:</strong> "Am I caught in either/or thinking? What's the both/and perspective?"</li>
                 </ul>
