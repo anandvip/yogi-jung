@@ -181,12 +181,13 @@
 
         .navigation {
             position: sticky;
-            top: 20px;
+            top: 10px;
             background: white;
             padding: 1rem;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             margin-bottom: 2rem;
+            z-index: 100;
         }
 
         .nav-title {
@@ -198,12 +199,12 @@
 
         .nav-select {
             width: 100%;
-            padding: 0.8rem 1rem;
-            border: 2px solid var(--border-color);
+            padding: 0.8rem;
+            border: 2px solid var(--primary-color);
             border-radius: 8px;
             background: white;
-            font-family: 'Poppins', sans-serif;
-            font-size: 0.9rem;
+            font-family: 'Courier Prime', monospace;
+            font-size: 1rem;
             color: var(--primary-color);
             cursor: pointer;
             transition: all 0.3s ease;
@@ -221,86 +222,115 @@
 
         /* Collapsible Sections */
         .collapsible-section {
-            border: 1px solid var(--border-color);
-            border-radius: 15px;
-            margin-bottom: 1rem;
-            overflow: hidden;
-            transition: all 0.3s ease;
+            margin-bottom: 2rem;
         }
 
         .section-header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: white;
-            padding: 1.5rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
             cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             transition: all 0.3s ease;
+            padding: 2rem;
+            border: 2px solid transparent;
         }
 
         .section-header:hover {
-            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
         }
 
-        .section-header h1 {
-            margin: 0;
-            border: none;
-            padding: 0;
-            font-size: 1.8rem;
+        .section-header.active {
+            border-color: var(--accent-color);
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         }
 
-        .toggle-icon {
-            font-size: 1.2rem;
+        .section-toggle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            flex-grow: 1;
+        }
+
+        .collapse-icon {
+            font-size: 1.5rem;
             transition: transform 0.3s ease;
+            color: var(--accent-color);
+            margin-left: 1rem;
         }
 
-        .section-content {
-            padding: 2rem;
-            background: white;
-            height: 0;
-            overflow: hidden;
-            transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .collapsible-section.expanded .section-content {
-            height: auto;
-            animation: expandHeight 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-        }
-
-        .collapsible-section.expanded .toggle-icon {
+        .collapse-icon.rotated {
             transform: rotate(180deg);
         }
 
-        @keyframes expandHeight {
-            from {
-                height: 0;
-                opacity: 0;
-            }
-            to {
-                height: auto;
-                opacity: 1;
-            }
+        .section-content {
+            overflow: hidden;
+            transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 0;
         }
 
-        /* Mobile-first responsive design */
+        .section-content.expanded {
+            height: auto;
+        }
+
+        .section-inner {
+            padding: 2rem;
+            background: white;
+            border-radius: 0 0 15px 15px;
+            margin-top: -15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        /* Mobile Optimizations */
         @media (max-width: 768px) {
             .container { 
-                padding: 1rem 0.5rem; 
+                padding: 1rem; 
             }
             
             .main-title { 
                 font-size: 2rem; 
-                line-height: 1.2;
             }
             
-            .section-header h1 {
-                font-size: 1.4rem;
+            .section-title {
+                font-size: 1.5rem;
             }
             
-            .navigation {
-                position: static;
-                margin: 1rem 0.5rem 2rem 0.5rem;
+            .section-header {
+                padding: 1.5rem;
+            }
+            
+            .section-inner {
+                padding: 1.5rem;
+            }
+            
+            .popover-content {
+                max-width: 90vw;
+                padding: 1.5rem;
+                max-height: 70vh;
+            }
+
+            .nav-select {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-title { 
+                font-size: 1.8rem; 
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
             }
         }
 
@@ -508,19 +538,22 @@
 
         <div class="navigation">
             <div class="nav-title">📖 Quick Navigation</div>
-            <select class="nav-select" onchange="navigateToSection(this.value)">
-                <option value="">Choose a section...</option>
-                <option value="introduction">🧠 Introduction</option>
-                <option value="fragmentation">💔 Fragmentation vs Strength</option>
-                <option value="shadow">🌑 Shadow Integration</option>
-                <option value="opposites">⚖️ Holding Opposites</option>
-                <option value="projection">🪞 Projection Immunity</option>
-                <option value="suffering">🔥 Conscious Suffering</option>
-                <option value="sovereignty">👑 Psychological Sovereignty</option>
-                <option value="archetypes">🎭 12 Archetypal Figures</option>
-                <option value="attachment">🎯 Attachment Patterns</option>
-                <option value="practice">🎯 Complete Practice Guide</option>
+            <select class="nav-select" id="navigationSelect">
+                <option value="">Choose a section to explore...</option>
+                <option value="#introduction">🧠 Introduction: The Mind That Scares People</option>
+                <option value="#fragmentation">💔 Understanding Psychological Fragmentation</option>
+                <option value="#shadow">🌑 Principle 1: Complete Shadow Integration</option>
+                <option value="#opposites">⚖️ Principle 2: Holding Tension of Opposites</option>
+                <option value="#projection">🪞 Principle 3: Becoming Projection-Proof</option>
+                <option value="#suffering">🔥 Principle 4: Embracing Conscious Suffering</option>
+                <option value="#sovereignty">👑 Principle 5: Achieving Psychological Sovereignty</option>
+                <option value="#archetypes">🎭 The 12 Archetypal Figures</option>
+                <option value="#attachment">🎯 Archetypal Attachment Patterns</option>
+                <option value="#practice">🎯 Complete Integration Practice Guide</option>
             </select>
+            <div style="margin-top: 0.5rem; font-size: 0.85rem; color: #6c757d; text-align: center;">
+                💡 <em>Tap section headers to expand/collapse content • Mobile-optimized for on-the-go study</em>
+            </div>
         </div>
 
         <section id="introduction" class="content-section">
@@ -958,41 +991,49 @@
             </div>
         </section>
 
-        <section id="fragmentation" class="content-section">
-            <h1>💔 Understanding Psychological Fragmentation</h1>
-
-            <div class="important-quote">
-                "Jung observed that what we might call mental weakness often isn't about lack of intelligence or willpower. It could be psychological fragmentation. Many people's minds appear to be divided kingdoms: Conscious fighting unconscious, persona battling shadow, ego warring with self."
+        <div class="collapsible-section">
+            <div class="section-header" onclick="toggleSection('fragmentation')">
+                <div class="section-toggle">
+                    <h1 id="fragmentation" class="section-title">💔 Understanding Psychological Fragmentation</h1>
+                    <span class="collapse-icon" id="fragmentation-icon">▼</span>
+                </div>
             </div>
+            <div class="section-content" id="fragmentation-content">
+                <div class="section-inner">
+                    <div class="important-quote">
+                        "Jung observed that what we might call mental weakness often isn't about lack of intelligence or willpower. It could be psychological fragmentation. Many people's minds appear to be divided kingdoms: Conscious fighting unconscious, persona battling shadow, ego warring with self."
+                    </div>
 
-            <h2>Exploring the Fragmented Mind</h2>
-            <p>Many individuals seem easily influenced because they might be <span class="key-concept">internally divided</span>:</p>
+                    <h2>Exploring the Fragmented Mind</h2>
+                    <p>Many individuals seem easily influenced because they might be <span class="key-concept">internally divided</span>:</p>
 
-            <div class="example-box">
-                <strong>Possible Signs of Fragmentation:</strong>
-                <ul>
-                    <li>One comment significantly affects their entire day</li>
-                    <li>One rejection severely impacts their self-worth</li>
-                    <li>One challenge to beliefs creates existential crisis</li>
-                </ul>
+                    <div class="example-box">
+                        <strong>Possible Signs of Fragmentation:</strong>
+                        <ul>
+                            <li>One comment significantly affects their entire day</li>
+                            <li>One rejection severely impacts their self-worth</li>
+                            <li>One challenge to beliefs creates existential crisis</li>
+                        </ul>
+                    </div>
+
+                    <div class="exploration-note">
+                        💭 <strong>Self-Inquiry:</strong> Notice this week when you feel "divided" - when part of you wants one thing while another part wants something else. What does this internal dialogue reveal?
+                    </div>
+
+                    <h3>The Internal Division Pattern</h3>
+                    <p>Internal division might create vulnerability through:</p>
+                    <ul>
+                        <li><span class="key-concept">Conscious vs Unconscious</span> - Internal conflicts that weaken psychological defenses</li>
+                        <li><span class="key-concept">Persona vs Shadow</span> - Rejected aspects become manipulation points (explore <a href="#shadow" class="context-link">shadow work</a>)</li>
+                        <li><span class="key-concept">Ego vs Self</span> - Identity confusion creates instability</li>
+                    </ul>
+
+                    <div class="practice-tip">
+                        <strong>🔍 Weekly Observation Practice:</strong> Notice this week when you feel "divided" internally. What patterns do you observe? How might greater integration serve you? (Reference the <a href="#archetypes" class="context-link">4 core archetypes</a> for deeper understanding)
+                    </div>
+                </div>
             </div>
-
-            <div class="exploration-note">
-                💭 <strong>Self-Inquiry:</strong> Notice this week when you feel "divided" - when part of you wants one thing while another part wants something else. What does this internal dialogue reveal?
-            </div>
-
-            <h3>The Internal Division Pattern</h3>
-            <p>Internal division might create vulnerability through:</p>
-            <ul>
-                <li><span class="key-concept">Conscious vs Unconscious</span> - Internal conflicts that weaken psychological defenses</li>
-                <li><span class="key-concept">Persona vs Shadow</span> - Rejected aspects become manipulation points (explore <a href="#shadow" class="context-link">shadow work</a>)</li>
-                <li><span class="key-concept">Ego vs Self</span> - Identity confusion creates instability</li>
-            </ul>
-
-            <div class="practice-tip">
-                <strong>🔍 Weekly Observation Practice:</strong> Notice this week when you feel "divided" internally. What patterns do you observe? How might greater integration serve you? (Reference the <a href="#archetypes" class="context-link">4 core archetypes</a> for deeper understanding)
-            </div>
-        </section>
+        </div>
 
         <section id="shadow" class="content-section">
             <h1>🌑 Principle 1: Complete Shadow Integration</h1>
@@ -1703,19 +1744,78 @@
             document.getElementById('progressBar').style.width = progress + '%';
         });
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
+        // Navigation dropdown functionality
+        document.getElementById('navigationSelect').addEventListener('change', function() {
+            const targetId = this.value;
+            if (targetId) {
+                const targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    // If target is in a collapsed section, expand it first
+                    const sectionContent = targetElement.closest('.section-content');
+                    if (sectionContent && !sectionContent.classList.contains('expanded')) {
+                        const sectionId = sectionContent.id.replace('-content', '');
+                        toggleSection(sectionId);
+                        
+                        // Wait for animation to complete before scrolling
+                        setTimeout(() => {
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }, 400);
+                    } else {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                    
+                    // Reset dropdown
+                    this.value = '';
+                    
+                    // Add temporary highlight effect
+                    targetElement.style.backgroundColor = '#fff3cd';
+                    setTimeout(() => {
+                        targetElement.style.backgroundColor = '';
+                    }, 2000);
                 }
-            });
+            }
+        });
+
+        // Collapsible sections functionality
+        function toggleSection(sectionId) {
+            const content = document.getElementById(sectionId + '-content');
+            const icon = document.getElementById(sectionId + '-icon');
+            const header = content.previousElementSibling;
+            
+            if (content.classList.contains('expanded')) {
+                // Collapse
+                content.style.height = content.scrollHeight + 'px';
+                content.offsetHeight; // Force reflow
+                content.style.height = '0';
+                content.classList.remove('expanded');
+                icon.classList.remove('rotated');
+                header.classList.remove('active');
+            } else {
+                // Expand
+                content.style.height = '0';
+                content.classList.add('expanded');
+                content.style.height = content.scrollHeight + 'px';
+                icon.classList.add('rotated');
+                header.classList.add('active');
+                
+                // Reset height to auto after animation
+                setTimeout(() => {
+                    if (content.classList.contains('expanded')) {
+                        content.style.height = 'auto';
+                    }
+                }, 400);
+            }
+        }
+
+        // Initialize with first section expanded
+        document.addEventListener('DOMContentLoaded', function() {
+            toggleSection('introduction');
         });
 
         // Smooth scrolling for context links
@@ -1725,10 +1825,25 @@
                 const targetId = this.getAttribute('href').substring(1);
                 const targetElement = document.getElementById(targetId);
                 if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'center'
-                    });
+                    // If target is in a collapsed section, expand it first
+                    const sectionContent = targetElement.closest('.section-content');
+                    if (sectionContent && !sectionContent.classList.contains('expanded')) {
+                        const sectionId = sectionContent.id.replace('-content', '');
+                        toggleSection(sectionId);
+                        
+                        // Wait for animation to complete before scrolling
+                        setTimeout(() => {
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'center'
+                            });
+                        }, 400);
+                    } else {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'center'
+                        });
+                    }
                     
                     // Add temporary highlight effect
                     targetElement.style.backgroundColor = '#fff3cd';
