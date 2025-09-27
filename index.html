@@ -1,0 +1,1668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jung's Mental Strength Library - Study & Practice Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #e74c3c;
+            --highlight-yellow: #fff3cd;
+            --highlight-blue: #d1ecf1;
+            --highlight-green: #d4edda;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --border-color: #bdc3c7;
+            --bg-light: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Courier Prime', monospace;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .main-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            color: var(--text-light);
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        .study-note {
+            background: var(--highlight-blue);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #007acc;
+            font-style: italic;
+        }
+
+        .content-section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin: 2rem 0 1rem 0;
+        }
+
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--primary-color);
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .key-concept {
+            background: var(--highlight-yellow);
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        .important-quote {
+            background: var(--highlight-green);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #28a745;
+            margin: 1rem 0;
+            font-style: italic;
+            font-weight: 700;
+        }
+
+        .principle-box {
+            background: var(--bg-light);
+            border: 2px solid var(--accent-color);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+
+        .principle-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .example-box {
+            background: #e8f4f8;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #17a2b8;
+            margin: 1rem 0;
+        }
+
+        .practice-tip {
+            background: #fff3cd;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin: 1rem 0;
+        }
+
+        .recall-questions {
+            background: #f8d7da;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #dc3545;
+            margin: 2rem 0;
+        }
+
+        .recall-questions h3 {
+            color: #721c24;
+            margin-top: 0;
+        }
+
+        .recall-questions ul {
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .recall-questions li {
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .navigation {
+            position: sticky;
+            top: 20px;
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .nav-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .nav-link {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .creation-context {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            font-style: italic;
+            font-size: 0.8rem;
+            line-height: 1.6;
+        }
+
+        /* Popover Styles */
+        .info-trigger {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 0.3rem 0.6rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            margin-left: 0.5rem;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .info-trigger:hover {
+            background: #c0392b;
+            transform: scale(1.05);
+        }
+
+        [popover] {
+            position: fixed;
+            inset: 0;
+            width: fit-content;
+            height: fit-content;
+            margin: auto;
+            padding: 0;
+            border: none;
+            background: transparent;
+            backdrop-filter: blur(5px) brightness(0.8);
+        }
+
+        .popover-content {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            border: 2px solid var(--accent-color);
+            position: relative;
+        }
+
+        .popover-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .trap-section {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: var(--bg-light);
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .trap-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .shadow-work {
+            background: #f8d7da;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            border-left: 4px solid #dc3545;
+        }
+
+        .shadow-work .shadow-title {
+            font-weight: 600;
+            color: #721c24;
+            margin-bottom: 0.5rem;
+        }
+
+        .close-popover {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-light);
+        }
+
+        .universal-laws {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+
+        .law-item {
+            margin: 1rem 0;
+            padding: 0.8rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+            border-left: 3px solid rgba(255,255,255,0.8);
+        }
+
+        .law-name {
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .context-link {
+            color: var(--accent-color);
+            text-decoration: underline;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .context-link:hover {
+            color: #c0392b;
+            text-decoration-style: wavy;
+        }
+
+        .exploration-note {
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px dashed var(--highlight-color);
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-style: italic;
+        }
+
+        .framework-disclaimer {
+            background: var(--bg-light);
+            border-left: 4px solid #6c757d;
+            padding: 1rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+            color: #495057;
+            font-size: 0.95rem;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 4px;
+            background: #e9ecef;
+            border-radius: 2px;
+            margin: 1rem 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-color), #ff6b6b);
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="main-title">Jung's Mental Strength Library</h1>
+            <p class="subtitle">Study Guide for Psychological Integration & Sovereignty</p>
+            <div class="study-note">
+                📚 <strong>October 2024 Learning Practice:</strong> An exploratory framework integrating <a href="#archetypes" class="context-link">Jung's 4 core archetypes</a>, <a href="#shadow" class="context-link">5 principles of mental strength</a>, and <a href="#attachment" class="context-link">12 archetypal figures</a> into a comprehensive system for investigating psychological sovereignty and <a href="https://self.vipulanand.in/" target="_blank" style="color: #007acc; text-decoration: underline; font-weight: 600;">conscious detachment from outcomes</a>.
+            </div>
+
+            <div class="framework-disclaimer">
+                <strong>🧭 Exploration Note:</strong> These frameworks are offered as tools for self-discovery, not absolute truths. Jung himself emphasized individual exploration over rigid doctrine. Use what resonates, adapt what serves, and trust your own experience as the ultimate guide. Change is indeed the pattern of nature - your understanding may evolve as you do.
+            </div>
+            
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 0%" id="progressBar"></div>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <div class="nav-title">📖 Quick Navigation</div>
+            <div class="nav-links">
+                <a href="#introduction" class="nav-link">Introduction</a>
+                <a href="#fragmentation" class="nav-link">Fragmentation vs Strength</a>
+                <a href="#shadow" class="nav-link">Shadow Integration</a>
+                <a href="#opposites" class="nav-link">Holding Opposites</a>
+                <a href="#projection" class="nav-link">Projection Immunity</a>
+                <a href="#suffering" class="nav-link">Conscious Suffering</a>
+                <a href="#sovereignty" class="nav-link">Psychological Sovereignty</a>
+                <a href="#archetypes" class="nav-link">12 Archetypal Figures</a>
+                <a href="#attachment" class="nav-link">Attachment Patterns</a>
+                <a href="#practice" class="nav-link">Complete Practice Guide</a>
+            </div>
+        </div>
+
+        <section id="introduction" class="content-section">
+            <h1>🧠 Introduction: The Mind That Scares People</h1>
+            
+            <div class="important-quote">
+                "There appears to be a type of psychological strength that makes people deeply uncomfortable. Not physical intimidation, not aggressive dominance. A mind so integrated, so conscious, so unshakable that it may literally frighten people who encounter it."
+            </div>
+
+            <p>Jung seemed to discover that authentic mental strength might not come from becoming harder or colder. It could emerge from becoming so <span class="key-concept">psychologically complete</span> that external forces struggle to find footholds in one's psyche.</p>
+
+            <div class="exploration-note">
+                💭 <strong>Consider This:</strong> What if the strength that unsettles others isn't about domination, but about integration? These concepts invite exploration rather than blind adoption.
+            </div>
+
+            <h3>Why This Integration Might Unsettle Others</h3>
+            <p>An integrated mind might demonstrate:</p>
+            <ul>
+                <li>Resistance to <span class="key-concept">manipulation</span> (explore <a href="#projection" class="context-link">projection immunity</a>)</li>
+                <li>Immunity to <span class="key-concept">gaslighting</span> (see <a href="#sovereignty" class="context-link">psychological sovereignty</a>)</li>
+                <li>Clarity about <span class="key-concept">collective delusions</span></li>
+                <li>Ability to recognize <span class="key-concept">unconscious patterns</span> (study <a href="#shadow" class="context-link">shadow integration</a>)</li>
+                <li>Capacity to remain centered during chaos (explore <a href="#opposites" class="context-link">holding opposites</a>)</li>
+            </ul>
+
+            <div class="recall-questions">
+                <h3>🎯 Exploration Questions</h3>
+                <ul>
+                    <li>How might Jung's concept of mental strength differ from conventional ideas about toughness?</li>
+                    <li>What could "psychological completeness" mean in practical terms?</li>
+                    <li>Which of these five capacities (see <a href="#shadow" class="context-link">integration principles</a>) resonates most with your experience?</li>
+                    <li>How do you notice fragmentation vs. integration in your own daily responses?</li>
+                </ul>
+            </div>
+
+            <!-- Universal Laws Popover -->
+            <div id="universal-laws-info" popover>
+                <div class="popover-content">
+                    <button class="close-popover" popovertarget="universal-laws-info">×</button>
+                    <div class="popover-title">🧙‍♂️ Universal Laws - The Wizard's Knowledge</div>
+                    <div class="universal-laws">
+                        <div class="law-item">
+                            <div class="law-name">Law of Correspondence</div>
+                            "As above, so below; as within, so without" - Inner reality creates outer reality
+                        </div>
+                        <div class="law-item">
+                            <div class="law-name">Law of Cause & Effect</div>
+                            Every action has consequences; nothing happens by chance
+                        </div>
+                        <div class="law-item">
+                            <div class="law-name">Law of Vibration</div>
+                            Everything in the universe is in constant motion and vibrates at specific frequencies
+                        </div>
+                        <div class="law-item">
+                            <div class="law-name">Law of Attraction</div>
+                            Like attracts like; similar energies are drawn together
+                        </div>
+                        <div class="law-item">
+                            <div class="law-name">Law of Polarity</div>
+                            Everything has an opposite; extremes are two ends of the same thing
+                        </div>
+                        <div class="law-item">
+                            <div class="law-name">Law of Rhythm</div>
+                            Everything flows in cycles; what goes up must come down
+                        </div>
+                        <div class="law-item">
+                            <div class="law-name">Law of Gender</div>
+                            Everything has masculine (active) and feminine (receptive) principles
+                        </div>
+                    </div>
+                    <div class="important-quote">
+                        <strong>Wizard's Wisdom:</strong> Understanding these laws allows conscious co-creation with universal forces rather than fighting against them. The Wizard knows that attachment to specific outcomes disrupts natural flow.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Traps Popover -->
+            <div id="hero-traps" popover>
+                <div class="popover-content">
+                    <button class="close-popover" popovertarget="hero-traps">×</button>
+                    <div class="popover-title">🏆 Hero Archetype - Traps & Shadow Work</div>
+                    
+                    <div class="trap-section">
+                        <div class="trap-title">⚠️ Primary Traps:</div>
+                        <ul>
+                            <li><strong>Savior Complex:</strong> Believing they must rescue everyone</li>
+                            <li><strong>Binary Thinking:</strong> Win/lose, success/failure mentality</li>
+                            <li><strong>Burnout:</strong> Constantly pushing beyond limits</li>
+                            <li><strong>Perfectionism:</strong> Anything less than victory feels like failure</li>
+                            <li><strong>Isolation:</strong> Carrying burdens alone</li>
+                        </ul>
+                    </div>
+
+                    <div class="shadow-work">
+                        <div class="shadow-title">🌑 Shadow Work Integration:</div>
+                        <ul>
+                            <li><strong>Embrace Vulnerability:</strong> Allow others to help you</li>
+                            <li><strong>Accept "Failure":</strong> See setbacks as learning opportunities</li>
+                            <li><strong>Rest & Receive:</strong> Practice being supported rather than always supporting</li>
+                            <li><strong>Ordinary Moments:</strong> Find value in non-heroic experiences</li>
+                            <li><strong>Collaborative Strength:</strong> Share the load with team approach</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ruler Traps Popover -->
+            <div id="ruler-traps" popover>
+                <div class="popover-content">
+                    <button class="close-popover" popovertarget="ruler-traps">×</button>
+                    <div class="popover-title">👑 Ruler Archetype - Traps & Shadow Work</div>
+                    
+                    <div class="trap-section">
+                        <div class="trap-title">⚠️ Primary Traps:</div>
+                        <ul>
+                            <li><strong>Control Addiction:</strong> Need to micromanage everything</li>
+                            <li><strong>Rigidity:</strong> Inability to adapt when plans change</li>
+                            <li><strong>Superiority Complex:</strong> Believing they know what's best for everyone</li>
+                            <li><strong>Isolation at the Top:</strong> Loneliness of leadership</li>
+                            <li><strong>Legacy Pressure:</strong> Obsession with lasting impact</li>
+                        </ul>
+                    </div>
+
+                    <div class="shadow-work">
+                        <div class="shadow-title">🌑 Shadow Work Integration:</div>
+                        <ul>
+                            <li><strong>Embrace Uncertainty:</strong> Practice letting go of control</li>
+                            <li><strong>Servant Leadership:</strong> Lead by serving rather than commanding</li>
+                            <li><strong>Beginner's Mind:</strong> Learn from those you lead</li>
+                            <li><strong>Emotional Intelligence:</strong> Connect with feelings, not just strategy</li>
+                            <li><strong>Collaborative Decision-Making:</strong> Include others in important choices</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lover Traps Popover -->
+            <div id="lover-traps" popover>
+                <div class="popover-content">
+                    <button class="close-popover" popovertarget="lover-traps">×</button>
+                    <div class="popover-title">💕 Lover Archetype - Traps & Shadow Work</div>
+                    
+                    <div class="trap-section">
+                        <div class="trap-title">⚠️ Primary Traps:</div>
+                        <ul>
+                            <li><strong>Codependency:</strong> Losing self in relationships</li>
+                            <li><strong>Jealousy & Possessiveness:</strong> Fear of losing love</li>
+                            <li><strong>Emotional Chaos:</strong> Ruled by feelings and passion</li>
+                            <li><strong>Identity Fusion:</strong> Can't exist without "the other"</li>
+                            <li><strong>Romantic Idealization:</strong> Unrealistic expectations</li>
+                        </ul>
+                    </div>
+
+                    <div class="shadow-work">
+                        <div class="shadow-title">🌑 Shadow Work Integration:</div>
+                        <ul>
+                            <li><strong>Self-Love First:</strong> Develop relationship with yourself</li>
+                            <li><strong>Healthy Boundaries:</strong> Maintain individual identity</li>
+                            <li><strong>Emotional Regulation:</strong> Feel without being consumed</li>
+                            <li><strong>Non-Attachment:</strong> Love without clinging</li>
+                            <li><strong>Universal Love:</strong> Expand beyond romantic obsession</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Caregiver Traps Popover -->
+            <div id="caregiver-traps" popover>
+                <div class="popover-content">
+                    <button class="close-popover" popovertarget="caregiver-traps">×</button>
+                    <div class="popover-title">🤗 Caregiver Archetype - Traps & Shadow Work</div>
+                    
+                    <div class="trap-section">
+                        <div class="trap-title">⚠️ Primary Traps:</div>
+                        <ul>
+                            <li><strong>Martyrdom:</strong> Self-sacrifice to the point of depletion</li>
+                            <li><strong>Enabling:</strong> Preventing others' growth by over-helping</li>
+                            <li><strong>Guilt Manipulation:</strong> Using care as control mechanism</li>
+                            <li><strong>Burnout:</strong> Giving until empty</li>
+                            <li><strong>Resentment:</strong> Hidden anger at being unappreciated</li>
+                        </ul>
+                    </div>
+
+                    <div class="shadow-work">
+                        <div class="shadow-title">🌑 Shadow Work Integration:</div>
+                        <ul>
+                            <li><strong>Self-Care First:</strong> Fill your own cup before serving others</li>
+                            <li><strong>Empowering Others:</strong> Teach fishing rather than giving fish</li>
+                            <li><strong>Express Needs:</strong> Ask for help and support</li>
+                            <li><strong>Healthy Selfishness:</strong> Put your oxygen mask on first</li>
+                            <li><strong>Discernment:</strong> Know when NOT to help</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Creator Traps Popover -->
+            <div id="creator-traps" popover>
+                <div class="popover-content">
+                    <button class="close-popover" popovertarget="creator-traps">×</button>
+                    <div class="popover-title">🎨 Creator Archetype - Traps & Shadow Work</div>
+                    
+                    <div class="trap-section">
+                        <div class="trap-title">⚠️ Primary Traps:</div>
+                        <ul>
+                            <li><strong>Perfectionism:</strong> Never finishing due to impossibly high standards</li>
+                            <li><strong>Validation Addiction:</strong> Need for external approval/recognition</li>
+                            <li><strong>Comparison Trap:</strong> Constantly measuring against others</li>
+                            <li><strong>Creative Blocks:</strong> Fear of not being original enough</li>
+                            <li><strong>Tortured Artist:</strong> Believing suffering is necessary for art</li>
+                        </ul>
+                    </div>
+
+                    <div class="shadow-work">
+                        <div class="shadow-title">🌑 Shadow Work Integration:</div>
+                        <ul>
+                            <li><strong>Process Over Product:</strong> Enjoy creating for its own sake</li>
+                            <li><strong>Internal Validation:</strong> Develop self-approval systems</li>
+                            <li><strong>Embrace Imperfection:</strong> "Done is better than perfect"</li>
+                            <li><strong>Collaborative Creation:</strong> Share and build with others</li>
+                            <li><strong>Joyful Creating:</strong> Art from love, not suffering</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Innocent Traps Popover -->
+            <div id="innocent-traps" popover>
+                <div class="popover-content">
+                    <button class="close-popover" popovertarget="innocent-traps">×</button>
+                    <div class="popover-title">🌱 Innocent Archetype - Traps & Shadow Work</div>
+                    
+                    <div class="trap-section">
+                        <div class="trap-title">⚠️ Primary Traps:</div>
+                        <ul>
+                            <li><strong>Naivety:</strong> Refusing to see darkness/complexity</li>
+                            <li><strong>Victim Mentality:</strong> Helplessness when reality hits</li>
+                            <li><strong>Denial:</strong> Avoiding unpleasant truths</li>
+                            <li><strong>Dependency:</strong> Expecting others to handle difficulties</li>
+                            <li><strong>Magical Thinking:</strong> Believing good intentions alone suffice</li>
+                        </ul>
+                    </div>
+
+                    <div class="shadow-work">
+                        <div class="shadow-title">🌑 Shadow Work Integration:</div>
+                        <ul>
+                            <li><strong>Embrace Complexity:</strong> Accept that life has both light and dark</li>
+                            <li><strong>Develop Discernment:</strong> Learn to see people and situations clearly</li>
+                            <li><strong>Take Responsibility:</strong> Own your choices and their consequences</li>
+                            <li><strong>Build Resilience:</strong> Develop skills to handle difficulties</li>
+                            <li><strong>Wise Innocence:</strong> Maintain wonder while being realistic</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Explorer Traps Popover -->
+            <div id="explorer-traps" popover>
+                <div class="popover-content">
+                    <button class="close-popover" popovertarget="explorer-traps">×</button>
+                    <div class="popover-title">🗺️ Explorer Archetype - Traps & Shadow Work</div>
+                    
+                    <div class="trap-section">
+                        <div class="trap-title">⚠️ Primary Traps:</div>
+                        <ul>
+                            <li><strong>Commitment Phobia:</strong> Running from depth and responsibility</li>
+                            <li><strong>Restlessness:</strong> Never satisfied with current situation</li>
+                            <li><strong>Surface Skimming:</strong> Always moving, never deepening</li>
+                            <li><strong>Isolation:</strong> Avoiding intimate connections</li>
+                            <li><strong>Addiction to Novelty:</strong> Constant need for new experiences</li>
+                        </ul>
+                    </div>
+
+                    <div class="shadow-work">
+                        <div class="shadow-title">🌑 Shadow Work Integration:</div>
+                        <ul>
+                            <li><strong>Depth Exploration:</strong> Go deeper into relationships and experiences</li>
+                            <li><strong>Commitment Practice:</strong> Choose to stay and work through challenges</li>
+                            <li><strong>Present Moment:</strong> Find adventure in the here and now</li>
+                            <li><strong>Intimacy Skills:</strong> Learn to connect deeply with others</li>
+                            <li><strong>Inner Journey:</strong> Explore the landscape of your own psyche</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rebel Traps Popover -->
+            <div id="rebel-traps" popover>
+                <div class="popover-content">
+                    <button class="close-popover" popovertarget="rebel-traps">×</button>
+                    <div class="popover-title">⚡ Rebel Archetype - Traps & Shadow Work</div>
+                    
+                    <div class="trap-section">
+                        <div class="trap-title">⚠️ Primary Traps:</div>
+                        <ul>
+                            <li><strong>Reactive Identity:</strong> Defining self only in opposition to others</li>
+                            <li><strong>Destructive Rebellion:</strong> Tearing down without building up</li>
+                            <li><strong>Authority Issues:</strong> Rejecting all guidance or structure</li>
+                            <li><strong>Chronic Anger:</strong> Perpetual state of opposition and frustration</li>
+                            <li><strong>Isolation:</strong> Pushing away potential allies</li>
+                        </ul>
+                    </div>
+
+                    <div class="shadow-work">
+                        <div class="shadow-title">🌑 Shadow Work Integration:</div>
+                        <ul>
+                            <li><strong>Constructive Rebellion:</strong> Channel energy into positive change</li>
+                            <li><strong>Collaborative Revolution:</strong> Work with others for transformation</li>
+                            <li><strong>Internal Authority:</strong> Develop your own principles and values</li>
+                            <li><strong>Strategic Thinking:</strong> Choose battles wisely</li>
+                            <li><strong>Acceptance Integration:</strong> Learn when to work within systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Everyman Traps Popover -->
+            <div id="everyman-traps" popover>
+                <div class="popover-content">
+                    <button class="close-popover" popovertarget="everyman-traps">×</button>
+                    <div class="popover-title">👥 Everyman Archetype - Traps & Shadow Work</div>
+                    
+                    <div class="trap-section">
+                        <div class="trap-title">⚠️ Primary Traps:</div>
+                        <ul>
+                            <li><strong>Conformity Pressure:</strong> Losing authenticity to fit in</li>
+                            <li><strong>Fear of Standing Out:</strong> Avoiding uniqueness or excellence</li>
+                            <li><strong>Group Think:</strong> Unquestioning acceptance of majority opinion</li>
+                            <li><strong>Mediocrity Trap:</strong> Playing small to avoid rejection</li>
+                            <li><strong>Victim of Circumstances:</strong> Believing they have no individual power</li>
+                        </ul>
+                    </div>
+
+                    <div class="shadow-work">
+                        <div class="shadow-title">🌑 Shadow Work Integration:</div>
+                        <ul>
+                            <li><strong>Authentic Expression:</strong> Honor your unique perspectives and gifts</li>
+                            <li><strong>Individual Thinking:</strong> Question group assumptions</li>
+                            <li><strong>Excellence Permission:</strong> Allow yourself to succeed and stand out</li>
+                            <li><strong>Leadership Moments:</strong> Step up when your gifts are needed</li>
+                            <li><strong>Personal Power:</strong> Recognize your ability to influence and choose</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jester Traps Popover -->
+            <div id="jester-traps" popover>
+                <div class="popover-content">
+                    <button class="close-popover" popovertarget="jester-traps">×</button>
+                    <div class="popover-title">🃏 Jester Archetype - Traps & Shadow Work</div>
+                    
+                    <div class="trap-section">
+                        <div class="trap-title">⚠️ Primary Traps:</div>
+                        <ul>
+                            <li><strong>Emotional Avoidance:</strong> Using humor to escape difficult feelings</li>
+                            <li><strong>Superficiality:</strong> Never going deep in relationships or experiences</li>
+                            <li><strong>Compulsive Entertainment:</strong> Need to always be "on" and amusing</li>
+                            <li><strong>Self-Deprecation:</strong> Putting self down to get laughs</li>
+                            <li><strong>Responsibility Avoidance:</strong> Using humor to escape serious commitments</li>
+                        </ul>
+                    </div>
+
+                    <div class="shadow-work">
+                        <div class="shadow-title">🌑 Shadow Work Integration:</div>
+                        <ul>
+                            <li><strong>Emotional Honesty:</strong> Share your real feelings, not just jokes</li>
+                            <li><strong>Sacred Seriousness:</strong> Honor moments that require depth</li>
+                            <li><strong>Vulnerable Connection:</strong> Let others see behind the mask</li>
+                            <li><strong>Constructive Humor:</strong> Use comedy to heal and unite, not avoid</li>
+                            <li><strong>Commitment Capacity:</strong> Follow through on serious responsibilities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sage Traps Popover -->
+            <div id="sage-traps" popover>
+                <div class="popover-content">
+                    <button class="close-popover" popovertarget="sage-traps">×</button>
+                    <div class="popover-title">📚 Sage Archetype - Traps & Shadow Work</div>
+                    
+                    <div class="trap-section">
+                        <div class="trap-title">⚠️ Primary Traps:</div>
+                        <ul>
+                            <li><strong>Analysis Paralysis:</strong> Overthinking instead of acting</li>
+                            <li><strong>Intellectual Superiority:</strong> Feeling above "lesser" minds</li>
+                            <li><strong>Emotional Detachment:</strong> Living in head, avoiding heart</li>
+                            <li><strong>Perfectionist Knowledge:</strong> Never feeling ready to share wisdom</li>
+                            <li><strong>Isolation:</strong> Withdrawing from "ignorant" people</li>
+                        </ul>
+                    </div>
+
+                    <div class="shadow-work">
+                        <div class="shadow-title">🌑 Shadow Work Integration:</div>
+                        <ul>
+                            <li><strong>Embodied Wisdom:</strong> Live your knowledge, don't just think it</li>
+                            <li><strong>Humble Teaching:</strong> Share wisdom without superiority</li>
+                            <li><strong>Emotional Intelligence:</strong> Integrate feeling with thinking</li>
+                            <li><strong>Practical Application:</strong> Use knowledge to help and serve</li>
+                            <li><strong>Beginner's Mind:</strong> Remain open to learning from anyone</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wizard Traps Popover -->
+            <div id="wizard-traps" popover>
+                <div class="popover-content">
+                    <button class="close-popover" popovertarget="wizard-traps">×</button>
+                    <div class="popover-title">🧙‍♂️ Wizard Archetype - Traps & Shadow Work</div>
+                    
+                    <div class="trap-section">
+                        <div class="trap-title">⚠️ Primary Traps:</div>
+                        <ul>
+                            <li><strong>Spiritual Bypassing:</strong> Using spirituality to avoid human issues</li>
+                            <li><strong>God Complex:</strong> Believing they control universal forces</li>
+                            <li><strong>Mystical Inflation:</strong> Losing touch with practical reality</li>
+                            <li><strong>Manipulation:</strong> Using "spiritual" knowledge to control others</li>
+                            <li><strong>Isolation:</strong> Feeling too evolved for ordinary relationships</li>
+                        </ul>
+                    </div>
+
+                    <div class="shadow-work">
+                        <div class="shadow-title">🌑 Shadow Work Integration:</div>
+                        <ul>
+                            <li><strong>Humble Service:</strong> Use gifts to help, not impress</li>
+                            <li><strong>Grounded Spirituality:</strong> Stay connected to human experience</li>
+                            <li><strong>Collaborative Magic:</strong> Work with others, not above them</li>
+                            <li><strong>Practical Mysticism:</strong> Apply spiritual insights to daily life</li>
+                            <li><strong>Ordinary Sacred:</strong> Find the divine in mundane moments</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="fragmentation" class="content-section">
+            <h1>💔 Understanding Psychological Fragmentation</h1>
+
+            <div class="important-quote">
+                "Jung observed that what we might call mental weakness often isn't about lack of intelligence or willpower. It could be psychological fragmentation. Many people's minds appear to be divided kingdoms: Conscious fighting unconscious, persona battling shadow, ego warring with self."
+            </div>
+
+            <h2>Exploring the Fragmented Mind</h2>
+            <p>Many individuals seem easily influenced because they might be <span class="key-concept">internally divided</span>:</p>
+
+            <div class="example-box">
+                <strong>Possible Signs of Fragmentation:</strong>
+                <ul>
+                    <li>One comment significantly affects their entire day</li>
+                    <li>One rejection severely impacts their self-worth</li>
+                    <li>One challenge to beliefs creates existential crisis</li>
+                </ul>
+            </div>
+
+            <div class="exploration-note">
+                💭 <strong>Self-Inquiry:</strong> Notice this week when you feel "divided" - when part of you wants one thing while another part wants something else. What does this internal dialogue reveal?
+            </div>
+
+            <h3>The Internal Division Pattern</h3>
+            <p>Internal division might create vulnerability through:</p>
+            <ul>
+                <li><span class="key-concept">Conscious vs Unconscious</span> - Internal conflicts that weaken psychological defenses</li>
+                <li><span class="key-concept">Persona vs Shadow</span> - Rejected aspects become manipulation points (explore <a href="#shadow" class="context-link">shadow work</a>)</li>
+                <li><span class="key-concept">Ego vs Self</span> - Identity confusion creates instability</li>
+            </ul>
+
+            <div class="practice-tip">
+                <strong>🔍 Weekly Observation Practice:</strong> Notice this week when you feel "divided" internally. What patterns do you observe? How might greater integration serve you? (Reference the <a href="#archetypes" class="context-link">4 core archetypes</a> for deeper understanding)
+            </div>
+        </section>
+
+        <section id="shadow" class="content-section">
+            <h1>🌑 Principle 1: Complete Shadow Integration</h1>
+
+            <div class="principle-box">
+                <div class="principle-title">Jung's First Principle:</div>
+                "Every rejected aspect of yourself is a door through which you can be manipulated. Close those doors by reclaiming what you've disowned, and you become psychologically impenetrable."
+            </div>
+
+            <h2>Understanding the Shadow</h2>
+            <p>Your shadow contains everything you've labeled "bad" and pushed into unconscious darkness:</p>
+            <ul>
+                <li>Your <span class="key-concept">anger</span></li>
+                <li>Your <span class="key-concept">selfishness</span></li>
+                <li>Your <span class="key-concept">sexuality</span></li>
+                <li>Your <span class="key-concept">aggression</span></li>
+                <li>Your <span class="key-concept">vulnerability</span></li>
+            </ul>
+
+            <div class="important-quote">
+                "These aren't weaknesses to hide. They're powers you've rejected. And as long as they remain unconscious, others can use them against you."
+            </div>
+
+            <h3>How Shadow Manipulation Works</h3>
+            <div class="example-box">
+                <strong>The Remote Control Effect:</strong>
+                <ul>
+                    <li>Call someone with rejected anger "aggressive" → They bend over backwards to prove they're peaceful</li>
+                    <li>Accuse someone with disowned selfishness of being "selfish" → They sacrifice themselves to demonstrate otherwise</li>
+                </ul>
+            </div>
+
+            <h3>The Power of Integration</h3>
+            <p>When you integrate your shadow:</p>
+            <div class="example-box">
+                <strong>Before Integration:</strong><br>
+                "You're being selfish!" → Defensive reaction, self-sacrifice<br><br>
+                <strong>After Integration:</strong><br>
+                "You're being selfish!" → "Yes, I have the capacity for selfishness and I use it appropriately."
+            </div>
+
+            <div class="practice-tip">
+                <strong>🔍 Shadow Work Practice:</strong>
+                <ul>
+                    <li>What parts of yourself do you reject?</li>
+                    <li>What triggers you most in others?</li>
+                    <li>What accusations make you defensive?</li>
+                </ul>
+                <em>These are your shadow aspects begging for integration.</em>
+            </div>
+
+            <div class="recall-questions">
+                <h3>🎯 Shadow Integration Recall</h3>
+                <ul>
+                    <li>What five aspects commonly end up in the shadow?</li>
+                    <li>How does shadow manipulation work as a "remote control"?</li>
+                    <li>What's the difference between hiding the shadow and integrating it?</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="opposites" class="content-section">
+            <h1>⚖️ Principle 2: Holding the Tension of Opposites</h1>
+
+            <div class="principle-box">
+                <div class="principle-title">Jung's Second Key:</div>
+                "Develop the ability to hold opposite truths simultaneously without choosing sides. This makes you psychologically unmanipulatable because you can't be forced into false binaries."
+            </div>
+
+            <h2>The Problem with Binary Thinking</h2>
+            <p>Most people's minds collapse under paradox. They need things to be:</p>
+            <ul>
+                <li><span class="key-concept">Either/or</span></li>
+                <li><span class="key-concept">Black or white</span></li>
+                <li><span class="key-concept">Good or bad</span></li>
+            </ul>
+
+            <p>This binary thinking makes them controllable:</p>
+            <div class="example-box">
+                <strong>Control Through False Binaries:</strong>
+                <ul>
+                    <li>Force them to choose sides → You control their position</li>
+                    <li>Create false dilemmas → You dictate their options</li>
+                    <li>Present reality as either/or → You limit their responses</li>
+                </ul>
+            </div>
+
+            <h3>Jung's "Both/And" Reality</h3>
+            <div class="important-quote">
+                "Reality is both/and: Light and dark coexist. Good contains evil. Evil contains good. Strength includes vulnerability. Vulnerability includes strength."
+            </div>
+
+            <h3>The Uncontrollable Mind</h3>
+            <p>When someone with integrated thinking encounters manipulation:</p>
+            <ul>
+                <li><span class="key-concept">Either/or thinking</span> → Both/and awareness</li>
+                <li><span class="key-concept">False dilemmas</span> → Third options emerge</li>
+                <li><span class="key-concept">Demand to choose sides</span> → Transcends the division</li>
+            </ul>
+
+            <div class="practice-tip">
+                <strong>🧘 Paradox Practice:</strong>
+                <ul>
+                    <li>When faced with either/or choices, ask: "What if both are true?"</li>
+                    <li>When pushed to take sides, explore what transcends these sides</li>
+                    <li>When presented with contradictions, wonder: "How might these both be aspects of a larger truth?"</li>
+                </ul>
+            </div>
+
+            <div class="recall-questions">
+                <h3>🎯 Opposites Integration Recall</h3>
+                <ul>
+                    <li>What three ways does binary thinking make people controllable?</li>
+                    <li>Give three examples of Jung's "both/and" paradoxes</li>
+                    <li>How does holding tension of opposites prevent manipulation?</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projection" class="content-section">
+            <h1>🪞 Principle 3: Becoming Projection-Proof</h1>
+
+            <div class="principle-box">
+                <div class="principle-title">Jung's Third Principle:</div>
+                "Become so conscious of projection that others' projections can't touch you. When you understand that most of what people say about you is actually about them, their opinions lose all power over your psychological state."
+            </div>
+
+            <h2>Understanding Projection</h2>
+            <div class="important-quote">
+                "Projection is unconscious autobiography. When someone attacks you, they're usually describing their own shadow. When they judge you, they're revealing their own rejected aspects."
+            </div>
+
+            <h3>The Projection Dynamic</h3>
+            <p>Once you see projection clearly:</p>
+            <ul>
+                <li><span class="key-concept">Criticism</span> stops hurting when you recognize it as the critic's self-portrait</li>
+                <li><span class="key-concept">Attacks</span> stop landing when you see them as the attacker's shadow confession</li>
+                <li><span class="key-concept">Judgments</span> stop mattering when you understand them as the judge's unconscious material</li>
+            </ul>
+
+            <h3>The Mirror Effect</h3>
+            <div class="example-box">
+                <strong>Jung's Student Example:</strong><br>
+                In meetings where others attacked her ideas, she'd calmly respond: "That's interesting. What in you was reacting so strongly?"<br><br>
+                <em>Result:</em> Attackers became confused, agitated, often apologizing without understanding why.
+            </div>
+
+            <h3>Breaking the Projection Economy</h3>
+            <p>Most human interaction is <span class="key-concept">mutual projection</span>: "I'll carry your shadow if you carry mine."</p>
+            <p>When you stop participating:</p>
+            <ul>
+                <li>The unconscious economy collapses</li>
+                <li>People must become conscious or avoid you</li>
+                <li>You force others to face their own shadows</li>
+            </ul>
+
+            <div class="practice-tip">
+                <strong>🎭 Projection Immunity Practice:</strong>
+                <ul>
+                    <li>When triggered, ask: "Is this mine or theirs?"</li>
+                    <li>When attacked, wonder: "What are they confessing about themselves?"</li>
+                    <li>When judged, consider: "What shadow material are they projecting?"</li>
+                </ul>
+            </div>
+
+            <div class="recall-questions">
+                <h3>🎯 Projection Awareness Recall</h3>
+                <ul>
+                    <li>What is Jung's definition of projection as "unconscious autobiography"?</li>
+                    <li>How does the "mirror effect" work in practice?</li>
+                    <li>What happens when someone stops participating in the projection economy?</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="suffering" class="content-section">
+            <h1>🔥 Principle 4: Embracing Conscious Suffering</h1>
+
+            <div class="principle-box">
+                <div class="principle-title">Jung's Fourth Key:</div>
+                "Embrace conscious suffering. Not masochism or victim consciousness, but the strength that comes from voluntarily facing what others spend their lives avoiding."
+            </div>
+
+            <h2>The Avoidance Trap</h2>
+            <p>Most people organize their entire lives around <span class="key-concept">avoiding suffering</span>:</p>
+            <ul>
+                <li>They'll betray themselves</li>
+                <li>Abandon their truth</li>
+                <li>Sacrifice their integrity</li>
+                <li>Anything to avoid psychological pain</li>
+            </ul>
+
+            <div class="important-quote">
+                "This avoidance makes them controllable. Threaten them with suffering and they'll comply. Promise to remove suffering and they'll obey."
+            </div>
+
+            <h3>The Power of Voluntary Confrontation</h3>
+            <p>Consciously chosen suffering creates invincibility:</p>
+            <ul>
+                <li>Not because you become immune to suffering</li>
+                <li>But because you're no longer <span class="key-concept">controlled by the threat</span> of it</li>
+                <li>You've already been there voluntarily and survived</li>
+            </ul>
+
+            <div class="example-box">
+                <strong>Jung's Patient - Poverty Fear:</strong><br>
+                A man paralyzed by fear of poverty deliberately put himself through voluntary poverty for 6 months. He lived with absolute minimum, faced every fear about money.<br><br>
+                <em>Result:</em> He could no longer be controlled through financial fear. Employers couldn't threaten him with job loss. Society couldn't manipulate him through status anxiety.
+            </div>
+
+            <h3>Transformation Through Conscious Facing</h3>
+            <p>When you voluntarily face your fears:</p>
+            <ul>
+                <li><span class="key-concept">Fear of rejection</span> → Threat of rejection loses power</li>
+                <li><span class="key-concept">Fear of failure</span> → Fear of failure dissolves</li>
+                <li><span class="key-concept">Worst fears faced</span> → Fear becomes just another experience</li>
+            </ul>
+
+            <div class="practice-tip">
+                <strong>⚡ Conscious Suffering Practice:</strong>
+                <ul>
+                    <li>Identify your greatest fear</li>
+                    <li>Move toward it consciously (not recklessly, but deliberately)</li>
+                    <li>Face in small doses what you've been avoiding in totality</li>
+                    <li>Transform suffering from unconscious tyrant to conscious teacher</li>
+                </ul>
+            </div>
+
+            <div class="recall-questions">
+                <h3>🎯 Conscious Suffering Recall</h3>
+                <ul>
+                    <li>How does avoidance of suffering make people controllable?</li>
+                    <li>What's the difference between masochism and conscious suffering?</li>
+                    <li>How did Jung's patient overcome his fear of poverty?</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="sovereignty" class="content-section">
+            <h1>👑 Principle 5: Achieving Psychological Sovereignty</h1>
+
+            <div class="principle-box">
+                <div class="principle-title">Jung's Ultimate Principle:</div>
+                "Achieve complete psychological sovereignty. Your psyche becomes self-governing, self-determining, immune to colonization by others' thoughts, beliefs or emotions."
+            </div>
+
+            <h2>The Colonized Mind</h2>
+            <p>Most people are <span class="key-concept">psychologically colonized</span>:</p>
+            <ul>
+                <li>Their minds are occupied territories filled with others' opinions</li>
+                <li>They don't think their own thoughts - they think inherited thoughts</li>
+                <li>They don't feel their own emotions - they feel contagious emotions</li>
+                <li>They're not living their own lives - they're living scripted lives</li>
+            </ul>
+
+            <h3>The Sovereign Mind's Questions</h3>
+            <div class="important-quote">
+                The sovereign mind asks of every thought: "Is this mine or implanted?"<br>
+                Of every belief: "Did I choose this or inherit it?"<br>
+                Of every emotion: "Am I feeling this or catching it?"<br>
+                Of every desire: "Do I want this or was I programmed to want it?"
+            </div>
+
+            <h3>Jung's Declaration of Independence</h3>
+            <div class="example-box">
+                <strong>Jung's Break with Freud:</strong><br>
+                Jung had to separate his own thoughts from Freud's theories, his own path from Freud's expectations, his own truth from Freud's authority. It was psychological independence day.
+            </div>
+
+            <h3>The Terrifying Sovereignty</h3>
+            <p>A sovereign mind:</p>
+            <ul>
+                <li>Can't be influenced by <span class="key-concept">group think</span></li>
+                <li>Can't be swayed by <span class="key-concept">emotional contagion</span></li>
+                <li>Can't be controlled by <span class="key-concept">social pressure</span></li>
+                <li>Stands alone when necessary</li>
+                <li>Thinks independently always</li>
+                <li>Remains centered while others lose themselves</li>
+            </ul>
+
+            <div class="example-box">
+                <strong>Individuated Patient's Description:</strong><br>
+                "I feel like I finally own my own mind. Others' thoughts can visit but they can't move in. Others' emotions can be witnessed but not absorbed. Others' expectations can be considered but not obeyed."
+            </div>
+
+            <div class="practice-tip">
+                <strong>🏰 Sovereignty Practice - Psychological Hygiene:</strong>
+                <ul>
+                    <li>Constantly clean your psyche of foreign material</li>
+                    <li>Daily practice of distinguishing self from not-self</li>
+                    <li>Regular audits of beliefs, thoughts, emotions</li>
+                    <li>Identify what's authentically yours vs. implanted/absorbed</li>
+                </ul>
+            </div>
+
+            <div class="recall-questions">
+                <h3>🎯 Sovereignty Integration Recall</h3>
+                <ul>
+                    <li>What are the four key questions a sovereign mind asks?</li>
+                    <li>How was Jung's break with Freud a "psychological independence day"?</li>
+                    <li>What makes a sovereign mind "terrifying" to others?</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="archetypes" class="content-section">
+            <h1>🎭 The 12 Archetypal Figures: Practical Expression</h1>
+
+            <div class="important-quote">
+                "Jung acknowledged that the four main archetypes can intermingle and give rise to 12 archetypical figures. These represent different psychological strategies for navigating life - and your mental strength comes from consciously choosing which archetype to embody rather than being unconsciously driven by them."
+            </div>
+
+            <h2>The Complete Archetypal Spectrum</h2>
+            
+            <div class="principle-box">
+                <div class="principle-title">🎭 Persona-Oriented Figures (Social Adaptation)</div>
+                <ul>
+                    <li><span class="key-concept">Ruler</span> - Authority, control, responsibility</li>
+                    <li><span class="key-concept">Innocent</span> - Trust, optimism, faith</li>
+                    <li><span class="key-concept">Everyman</span> - Belonging, common ground, relatability</li>
+                    <li><span class="key-concept">Caregiver</span> - Service, compassion, protection</li>
+                </ul>
+            </div>
+
+            <div class="principle-box">
+                <div class="principle-title">🌑 Shadow-Integration Figures (Authentic Expression)</div>
+                <ul>
+                    <li><span class="key-concept">Rebel</span> - Revolution, freedom, challenging status quo</li>
+                    <li><span class="key-concept">Jester</span> - Humor, playfulness, breaking conventions</li>
+                    <li><span class="key-concept">Explorer</span> - Adventure, independence, discovery</li>
+                </ul>
+            </div>
+
+            <div class="principle-box">
+                <div class="principle-title">⚖️ Anima/Animus Figures (Contrasexual Integration)</div>
+                <ul>
+                    <li><span class="key-concept">Lover</span> - Passion, connection, beauty</li>
+                    <li><span class="key-concept">Creator/Artist</span> - Innovation, imagination, self-expression</li>
+                    <li><span class="key-concept">Wizard/Magician</span> - Transformation, understanding universal laws
+                        <button class="info-trigger" popovertarget="universal-laws-info">🧙‍♂️ Universal Laws</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="principle-box">
+                <div class="principle-title">👑 Self-Realization Figures (Individuation)</div>
+                <ul>
+                    <li><span class="key-concept">Hero</span> - Courage, achievement, overcoming challenges</li>
+                    <li><span class="key-concept">Sage</span> - Wisdom, understanding, truth-seeking</li>
+                </ul>
+            </div>
+
+            <h3>Conscious Archetypal Choice</h3>
+            <div class="example-box">
+                <strong>Instead of Being Driven By Archetypes:</strong><br>
+                "I always have to be the Hero" (unconscious compulsion)<br><br>
+                <strong>Consciously Choose Your Archetype:</strong><br>
+                "In this situation, would the Sage approach serve better than the Hero approach?" (conscious selection)
+            </div>
+
+            <div class="practice-tip">
+                <strong>🎯 Daily Archetypal Awareness Practice:</strong>
+                <ul>
+                    <li>Morning: "Which archetype is driving me today?"</li>
+                    <li>Before important interactions: "Which archetypal energy would serve this situation best?"</li>
+                    <li>Evening: "Which archetypes did I embody today? Were they conscious choices or unconscious compulsions?"</li>
+                </ul>
+            </div>
+
+            <div class="recall-questions">
+                <h3>🎯 Archetypal Integration Recall</h3>
+                <ul>
+                    <li>Which 4 archetypes relate to Persona work vs Shadow integration?</li>
+                    <li>What's the difference between being "driven by" vs "consciously choosing" an archetype?</li>
+                    <li>How do the 12 figures provide practical expression for the 4 core archetypes?</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="attachment" class="content-section">
+            <h1>🎯 Archetypal Attachment Patterns: The Path to Detachment</h1>
+
+            <div class="important-quote">
+                "Different archetypes have different relationships with attachment to outcomes. Understanding these patterns allows you to consciously choose archetypal approaches that naturally cultivate detachment and reduce suffering."
+            </div>
+
+            <h2>Comprehensive Archetypal Traps & Shadow Work</h2>
+            <div class="important-quote">
+                "Every archetype has its shadow - the unconscious traps that can ensnare us when we're identified with the archetype rather than consciously choosing it. Understanding these traps is essential for psychological sovereignty."
+            </div>
+            
+            <div class="example-box">
+                <strong>🏆 The Hero - Maximum Attachment</strong>
+                <button class="info-trigger" popovertarget="hero-traps">⚠️ Traps & Shadow Work</button><br>
+                <em>Core Attachment:</em> "I must succeed or I'm worthless"<br>
+                <em>Identity Trap:</em> Confuses personal worth with achievements
+            </div>
+
+            <div class="example-box">
+                <strong>👑 The Ruler - Control Attachment</strong>
+                <button class="info-trigger" popovertarget="ruler-traps">⚠️ Traps & Shadow Work</button><br>
+                <em>Core Attachment:</em> "Things must go according to my plan"<br>
+                <em>Identity Trap:</em> Needs vision to manifest to feel valuable
+            </div>
+
+            <div class="example-box">
+                <strong>💕 The Lover - Relationship Attachment</strong>
+                <button class="info-trigger" popovertarget="lover-traps">⚠️ Traps & Shadow Work</button><br>
+                <em>Core Attachment:</em> "I need this person/relationship to be complete"<br>
+                <em>Identity Trap:</em> Desperate attachment to connection outcomes
+            </div>
+
+            <div class="example-box">
+                <strong>🤗 The Caregiver - Helping Attachment</strong>
+                <button class="info-trigger" popovertarget="caregiver-traps">⚠️ Traps & Shadow Work</button><br>
+                <em>Core Attachment:</em> "I must save/fix everyone"<br>
+                <em>Identity Trap:</em> Worth depends on successfully helping others
+            </div>
+
+            <div class="example-box">
+                <strong>🎨 The Creator - Perfection Attachment</strong>
+                <button class="info-trigger" popovertarget="creator-traps">⚠️ Traps & Shadow Work</button><br>
+                <em>Core Attachment:</em> "My creation must be perfect/recognized"<br>
+                <em>Identity Trap:</em> Self-worth tied to creative output reception
+            </div>
+
+            <div class="example-box">
+                <strong>🌱 The Innocent - Naive Attachment</strong>
+                <button class="info-trigger" popovertarget="innocent-traps">⚠️ Traps & Shadow Work</button><br>
+                <em>Core Attachment:</em> "Everything should work out perfectly"<br>
+                <em>Identity Trap:</em> Avoids reality's complexity and darkness
+            </div>
+
+            <div class="example-box">
+                <strong>🗺️ The Explorer - Freedom Attachment</strong>
+                <button class="info-trigger" popovertarget="explorer-traps">⚠️ Traps & Shadow Work</button><br>
+                <em>Core Attachment:</em> "I must always have complete freedom"<br>
+                <em>Identity Trap:</em> Avoids commitment and deep relationships
+            </div>
+
+            <div class="example-box">
+                <strong>⚡ The Rebel - Opposition Attachment</strong>
+                <button class="info-trigger" popovertarget="rebel-traps">⚠️ Traps & Shadow Work</button><br>
+                <em>Core Attachment:</em> "I must destroy/change the system"<br>
+                <em>Identity Trap:</em> Defines self through opposition to others
+            </div>
+
+            <div class="example-box">
+                <strong>👥 The Everyman - Belonging Attachment</strong>
+                <button class="info-trigger" popovertarget="everyman-traps">⚠️ Traps & Shadow Work</button><br>
+                <em>Core Attachment:</em> "I must fit in and be accepted"<br>
+                <em>Identity Trap:</em> Loses authenticity for group acceptance
+            </div>
+
+            <div class="example-box">
+                <strong>🃏 The Jester - Entertainment Attachment</strong>
+                <button class="info-trigger" popovertarget="jester-traps">⚠️ Traps & Shadow Work</button><br>
+                <em>Core Attachment:</em> "I must make everyone laugh/happy"<br>
+                <em>Identity Trap:</em> Uses humor to avoid deep emotional truth
+            </div>
+
+            <div class="example-box">
+                <strong>📚 The Sage - Knowledge Attachment</strong>
+                <button class="info-trigger" popovertarget="sage-traps">⚠️ Traps & Shadow Work</button><br>
+                <em>Core Attachment:</em> "I must understand everything perfectly"<br>
+                <em>Identity Trap:</em> Intellectual superiority, avoiding lived experience
+            </div>
+
+            <div class="example-box">
+                <strong>🧙‍♂️ The Wizard - Power Attachment</strong>
+                <button class="info-trigger" popovertarget="wizard-traps">⚠️ Traps & Shadow Work</button><br>
+                <em>Core Attachment:</em> "I must control transformation/outcomes"<br>
+                <em>Identity Trap:</em> Spiritual bypassing, avoiding human limitations
+            </div>
+
+            <h2>Naturally Detached Archetypes (Ranked)</h2>
+
+            <div class="principle-box">
+                <div class="principle-title">🥇 Most Naturally Detached & Thorough</div>
+                
+                <h3>📚 The Sage - Ultimate Detachment</h3>
+                <ul>
+                    <li><span class="key-concept">Why:</span> Focused on understanding and wisdom rather than specific outcomes</li>
+                    <li><span class="key-concept">Mindset:</span> "The journey of learning is more valuable than any destination"</li>
+                    <li><span class="key-concept">Thorough because:</span> Systematically studies the nature of attachment</li>
+                </ul>
+
+                <h3>🧙‍♂️ The Wizard - Metaphysical Detachment</h3>
+                <ul>
+                    <li><span class="key-concept">Why:</span> Understands universal laws and patterns beyond surface outcomes</li>
+                    <li><span class="key-concept">Mindset:</span> "I work with forces beyond my control - my job is to align, not force"</li>
+                    <li><span class="key-concept">Thorough because:</span> Understands metaphysical principles behind detachment</li>
+                </ul>
+            </div>
+
+            <div class="principle-box">
+                <div class="principle-title">🥈 Moderately Detached</div>
+
+                <h3>🃏 The Jester - Playful Detachment</h3>
+                <ul>
+                    <li><span class="key-concept">Why:</span> Present-moment focused, doesn't take outcomes seriously</li>
+                    <li><span class="key-concept">Mindset:</span> "It's all a game anyway - might as well enjoy the play"</li>
+                </ul>
+
+                <h3>🗺️ The Explorer - Journey-Oriented</h3>
+                <ul>
+                    <li><span class="key-concept">Why:</span> Values the adventure and discovery process itself</li>
+                    <li><span class="key-concept">Mindset:</span> "The path reveals itself as I walk it"</li>
+                </ul>
+
+                <h3>🌱 The Innocent - Faith-Based Detachment</h3>
+                <ul>
+                    <li><span class="key-concept">Why:</span> Natural trust in the process, doesn't overthink outcomes</li>
+                    <li><span class="key-concept">Mindset:</span> "Things work out as they should"</li>
+                </ul>
+            </div>
+
+            <h3>Practical Detachment Strategy</h3>
+            <div class="important-quote">
+                "The Sage + Wizard combination is most thorough - combining intellectual understanding (Sage) with practical mastery of universal principles (Wizard). They understand that attachment is a fundamental misunderstanding of how consciousness and reality work."
+            </div>
+
+            <div class="practice-tip">
+                <strong>🔄 Archetypal Shifting Practice:</strong>
+                <ul>
+                    <li><strong>When feeling attached (Hero mode):</strong> "What would the Sage do in this situation?"</li>
+                    <li><strong>When needing to act (Wizard mode):</strong> "How can I align with natural forces rather than force outcomes?"</li>
+                    <li><strong>When taking things too seriously (Jester mode):</strong> "How can I bring lightness to this situation?"</li>
+                    <li><strong>When lost in destination (Explorer mode):</strong> "What is this moment trying to teach me?"</li>
+                </ul>
+            </div>
+
+            <div class="example-box">
+                <strong>Real-World Application:</strong><br>
+                <em>Situation:</em> Important job interview<br>
+                <em>Hero Response:</em> "I MUST get this job or I'm a failure"<br>
+                <em>Sage Response:</em> "This is an opportunity to learn and practice my communication skills"<br>
+                <em>Wizard Response:</em> "I'll prepare thoroughly, then trust the natural unfolding"<br>
+                <em>Explorer Response:</em> "I wonder what this experience will reveal about my path"
+            </div>
+
+            <div class="recall-questions">
+                <h3>🎯 Attachment Pattern Mastery Recall</h3>
+                <ul>
+                    <li>Which archetype is most prone to attachment and why?</li>
+                    <li>What makes the Sage and Wizard most thorough in their detachment approach?</li>
+                    <li>How can you consciously shift from attachment-prone to detached archetypal responses?</li>
+                    <li>What would each of the detached archetypes say about outcome attachment?</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="practice" class="content-section">
+            <h1>🎯 Complete Integration Practice Guide</h1>
+
+            <h2>The Three-Level Framework Working Together</h2>
+            <div class="important-quote">
+                "You now have the complete psychological toolkit: Foundation (4 Core Archetypes) + Method (5 Principles) + Expression (12 Figures) + Practical Focus (Conscious Archetypal Choice for Detachment). This creates the most sophisticated psychological development system possible."
+            </div>
+
+            <h3>The Complete Blueprint</h3>
+            <div class="principle-box">
+                <div class="principle-title">🏗️ Level 1: Foundation (4 Core Archetypes)</div>
+                <ul>
+                    <li><span class="key-concept">Self</span> - The archetype of wholeness (ultimate goal)</li>
+                    <li><span class="key-concept">Persona</span> - Social mask (sovereignty work)</li>
+                    <li><span class="key-concept">Shadow</span> - Rejected aspects (integration work)</li>
+                    <li><span class="key-concept">Anima/Animus</span> - Contrasexual aspects (holding opposites)</li>
+                </ul>
+            </div>
+
+            <div class="principle-box">
+                <div class="principle-title">⚡ Level 2: Method (5 Principles of Mental Strength)</div>
+                <ol>
+                    <li><span class="key-concept">Integrate your shadow completely</span> - No unconscious manipulation points</li>
+                    <li><span class="key-concept">Hold opposites without fragmenting</span> - Immunity to false binaries</li>
+                    <li><span class="key-concept">Become projection-proof</span> - Others' unconscious material can't stick</li>
+                    <li><span class="key-concept">Embrace conscious suffering</span> - No longer controllable through fear</li>
+                    <li><span class="key-concept">Achieve psychological sovereignty</span> - Self-governing mind</li>
+                </ol>
+            </div>
+
+            <div class="principle-box">
+                <div class="principle-title">🎭 Level 3: Expression (12 Archetypal Figures)</div>
+                <p><strong>Conscious Choice Strategy:</strong> Instead of being unconsciously driven by archetypes, consciously choose which archetypal energy serves each situation best.</p>
+                <p><strong>Detachment Focus:</strong> Cultivate Sage and Wizard approaches to naturally reduce attachment to outcomes.</p>
+            </div>
+
+            <h3>Daily Integration Practice Schedule</h3>
+            
+            <div class="example-box">
+                <strong>🌅 Morning Practice (10 minutes):</strong>
+                <ul>
+                    <li><strong>Foundation Check:</strong> "What shadow aspects am I avoiding today?"</li>
+                    <li><strong>Archetypal Intention:</strong> "Which archetypal energy do I want to embody today?"</li>
+                    <li><strong>Detachment Setting:</strong> "How can I approach today with Sage-like curiosity rather than Hero-like attachment?"</li>
+                </ul>
+            </div>
+
+            <div class="example-box">
+                <strong>🌞 Midday Check-in (5 minutes):</strong>
+                <ul>
+                    <li><strong>Projection Awareness:</strong> "What reactions am I having that might be projections?"</li>
+                    <li><strong>Archetypal Shift:</strong> "Am I being driven by attachment-prone archetypes? Can I shift to a more detached approach?"</li>
+                    <li><strong>Binary Trap Check:</strong> "Am I caught in either/or thinking? What's the both/and perspective?"</li>
+                </ul>
+            </div>
+
+            <div class="example-box">
+                <strong>🌙 Evening Integration (15 minutes):</strong>
+                <ul>
+                    <li><strong>Shadow Review:</strong> "What did I reject in myself or others today?"</li>
+                    <li><strong>Archetypal Audit:</strong> "Which archetypes did I embody? Were they conscious choices or unconscious compulsions?"</li>
+                    <li><strong>Suffering Assessment:</strong> "What did I avoid vs. consciously face today?"</li>
+                    <li><strong>Sovereignty Check:</strong> "Which thoughts/emotions were mine vs. absorbed from others?"</li>
+                </ul>
+            </div>
+
+            <h3>Advanced Integration Exercises</h3>
+
+            <div class="practice-tip">
+                <strong>🎭 The Archetypal Choice Exercise:</strong><br>
+                Before any important interaction or decision:
+                <ol>
+                    <li>Identify which archetype you're naturally defaulting to</li>
+                    <li>Ask: "Is this archetype serving this situation, or am I being unconsciously driven?"</li>
+                    <li>Consider: "What would the Sage do? The Wizard? The Explorer?"</li>
+                    <li>Consciously choose the most appropriate archetypal response</li>
+                    <li>Act from that chosen archetype rather than your default pattern</li>
+                </ol>
+            </div>
+
+            <div class="practice-tip">
+                <strong>🔄 The Attachment Transformation Practice:</strong><br>
+                When you notice attachment to outcomes:
+                <ol>
+                    <li><strong>Recognize:</strong> "I'm in Hero/Ruler/Lover/Caregiver attachment mode"</li>
+                    <li><strong>Shift:</strong> "What would the Sage say about this attachment?"</li>
+                    <li><strong>Reframe:</strong> Move from "I must achieve X" to "I wonder what this process will teach me"</li>
+                    <li><strong>Act:</strong> Take action from detached wisdom rather than attached desperation</li>
+                </ol>
+            </div>
+
+            <div class="practice-tip">
+                <strong>🌟 The Complete Integration Challenge:</strong><br>
+                Weekly practice combining all levels:
+                <ol>
+                    <li>Choose one situation where you felt triggered or reactive</li>
+                    <li>Identify which core archetype was involved (Shadow material? Persona protection? etc.)</li>
+                    <li>Apply the relevant principle (Shadow integration? Projection awareness? etc.)</li>
+                    <li>Determine which of the 12 figures you were unconsciously embodying</li>
+                    <li>Practice responding from a more detached archetypal choice</li>
+                </ol>
+            </div>
+
+            <h3>Why This Complete System Creates Unbreakable Mental Strength</h3>
+            <div class="important-quote">
+                "When you become conscious of your archetypal patterns, integrate your psychological foundation, and consciously choose detached approaches to outcomes, you achieve what Jung called 'psychological individuation' - becoming so psychologically complete that external forces can't find a foothold in your psyche."
+            </div>
+
+            <div class="example-box">
+                <strong>The Integrated Individual:</strong>
+                <ul>
+                    <li>Recognizes their archetypal patterns without being enslaved by them</li>
+                    <li>Can consciously shift between different archetypal energies as situations require</li>
+                    <li>Naturally approaches life with Sage-like wisdom and Wizard-like understanding</li>
+                    <li>Remains centered and unattached while still being fully engaged</li>
+                    <li>Cannot be manipulated because they own all aspects of their psyche</li>
+                </ul>
+            </div>
+
+            <div class="recall-questions">
+                <h3>🎯 Integration Exploration Questions</h3>
+                <ul>
+                    <li>How might the <a href="#archetypes" class="context-link">4 core archetypes</a> provide foundation for the <a href="#shadow" class="context-link">5 principles</a>?</li>
+                    <li>What's your experience with being "driven by" vs "consciously choosing" archetypal responses?</li>
+                    <li>How does understanding <a href="#attachment" class="context-link">attachment patterns by archetype</a> enhance your psychological awareness?</li>
+                    <li>What would a more integrated individual look like in their daily interactions?</li>
+                    <li>In what ways might archetypal consciousness create immunity to manipulation?</li>
+                    <li>Which aspects of this framework feel most relevant to your current growth edge?</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="footer">
+            <strong>Jung's Mental Strength Library - Study & Practice Archive</strong><br>
+            Created: October 2024 | Singapore (SGT)<br>
+            Webpage crafted for individual practice, rehearsal, and psychological integration
+            
+            <div class="creation-context">
+                <strong>Creator's Context:</strong> This exploratory study library was created during Vipul Anand's October 2024 learning intensive, focusing on Jung's principles as frameworks for psychological exploration rather than absolute doctrines. The goal was to transform complex psychological concepts into a practical study guide that enhances memory retention and supports individual inquiry. This webpage serves as a digital reference for ongoing psychological development work, recognizing that true wisdom emerges from personal exploration and conscious choice rather than rigid adherence to any single system.
+                <br><br>
+                <em>Timestamp: 2024-10-04T16:20:00+08:00</em> | <em>Repository: Psychology & Personal Development Collection</em><br>
+                <em>Purpose: Individual exploration, memory retention, and conscious integration practice</em><br>
+                <em>Approach: Frameworks for investigation, not absolute truths for adoption</em>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Progress bar functionality
+        window.addEventListener('scroll', function() {
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight - windowHeight;
+            const scrolled = window.scrollY;
+            const progress = (scrolled / documentHeight) * 100;
+            
+            document.getElementById('progressBar').style.width = progress + '%';
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Smooth scrolling for context links
+        document.querySelectorAll('.context-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                    
+                    // Add temporary highlight effect
+                    targetElement.style.backgroundColor = '#fff3cd';
+                    setTimeout(() => {
+                        targetElement.style.backgroundColor = '';
+                    }, 2000);
+                }
+            });
+        });
+
+        // Add reading time estimate
+        document.addEventListener('DOMContentLoaded', function() {
+            const wordCount = document.body.innerText.split(' ').length;
+            const readingTime = Math.ceil(wordCount / 200); // Average reading speed
+            
+            const header = document.querySelector('.header');
+            const readingTimeDiv = document.createElement('div');
+            readingTimeDiv.innerHTML = `<small>📖 Estimated reading time: ${readingTime} minutes</small>`;
+            readingTimeDiv.style.marginTop = '1rem';
+            readingTimeDiv.style.color = '#7f8c8d';
+            header.appendChild(readingTimeDiv);
+        });
+    </script>
+</body>
+</html>
