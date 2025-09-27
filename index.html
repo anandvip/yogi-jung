@@ -196,25 +196,112 @@
             margin-bottom: 1rem;
         }
 
-        .nav-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .nav-link {
-            background: var(--primary-color);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            text-decoration: none;
+        .nav-select {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            background: white;
+            font-family: 'Poppins', sans-serif;
             font-size: 0.9rem;
+            color: var(--primary-color);
+            cursor: pointer;
             transition: all 0.3s ease;
         }
 
-        .nav-link:hover {
-            background: var(--accent-color);
-            transform: translateY(-2px);
+        .nav-select:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+        }
+
+        .nav-select:hover {
+            border-color: var(--accent-color);
+        }
+
+        /* Collapsible Sections */
+        .collapsible-section {
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .section-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .section-header:hover {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+        }
+
+        .section-header h1 {
+            margin: 0;
+            border: none;
+            padding: 0;
+            font-size: 1.8rem;
+        }
+
+        .toggle-icon {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .section-content {
+            padding: 2rem;
+            background: white;
+            height: 0;
+            overflow: hidden;
+            transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .collapsible-section.expanded .section-content {
+            height: auto;
+            animation: expandHeight 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        .collapsible-section.expanded .toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        @keyframes expandHeight {
+            from {
+                height: 0;
+                opacity: 0;
+            }
+            to {
+                height: auto;
+                opacity: 1;
+            }
+        }
+
+        /* Mobile-first responsive design */
+        @media (max-width: 768px) {
+            .container { 
+                padding: 1rem 0.5rem; 
+            }
+            
+            .main-title { 
+                font-size: 2rem; 
+                line-height: 1.2;
+            }
+            
+            .section-header h1 {
+                font-size: 1.4rem;
+            }
+            
+            .navigation {
+                position: static;
+                margin: 1rem 0.5rem 2rem 0.5rem;
+            }
         }
 
         .footer {
@@ -421,18 +508,19 @@
 
         <div class="navigation">
             <div class="nav-title">📖 Quick Navigation</div>
-            <div class="nav-links">
-                <a href="#introduction" class="nav-link">Introduction</a>
-                <a href="#fragmentation" class="nav-link">Fragmentation vs Strength</a>
-                <a href="#shadow" class="nav-link">Shadow Integration</a>
-                <a href="#opposites" class="nav-link">Holding Opposites</a>
-                <a href="#projection" class="nav-link">Projection Immunity</a>
-                <a href="#suffering" class="nav-link">Conscious Suffering</a>
-                <a href="#sovereignty" class="nav-link">Psychological Sovereignty</a>
-                <a href="#archetypes" class="nav-link">12 Archetypal Figures</a>
-                <a href="#attachment" class="nav-link">Attachment Patterns</a>
-                <a href="#practice" class="nav-link">Complete Practice Guide</a>
-            </div>
+            <select class="nav-select" onchange="navigateToSection(this.value)">
+                <option value="">Choose a section...</option>
+                <option value="introduction">🧠 Introduction</option>
+                <option value="fragmentation">💔 Fragmentation vs Strength</option>
+                <option value="shadow">🌑 Shadow Integration</option>
+                <option value="opposites">⚖️ Holding Opposites</option>
+                <option value="projection">🪞 Projection Immunity</option>
+                <option value="suffering">🔥 Conscious Suffering</option>
+                <option value="sovereignty">👑 Psychological Sovereignty</option>
+                <option value="archetypes">🎭 12 Archetypal Figures</option>
+                <option value="attachment">🎯 Attachment Patterns</option>
+                <option value="practice">🎯 Complete Practice Guide</option>
+            </select>
         </div>
 
         <section id="introduction" class="content-section">
